@@ -44,14 +44,14 @@ FILE *generate_output_file(char *fname, char *rng_name, unsigned int seed, char 
 int main() {
   /* local variables */
   double x_n;             // The value of latest map iteration in range [0,1]
-  //unsigned int seed;      // The seed value of the map
+  unsigned int seed;      // The seed value of the map
 
   // Set up the seed with the built in modules
-  //seed = time(NULL);
+  seed = time(NULL);
   // ToDo: FIX THE SEEDING 
-  FILE *f_out = generate_output_file(fname, "chebyshev", 6, type);
-  //x_n = uint_to_double(seed);
-  x_n = 0.6;
+  FILE *f_out = generate_output_file(fname, "chebyshev", seed, type);
+  x_n = uint_to_double(seed);
+  
   for (int i = 0; i < COUNT; i++) {
     x_n = iterate(x_n, i);
     fprintf(f_out, "%u\n", double_to_uint(x_n));

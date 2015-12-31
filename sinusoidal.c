@@ -17,7 +17,6 @@ char *fname = "sinusoidal_output.txt";
 char *type = "d";
 
 double iterate(double x_n) {
-  // x(i+1) = 2.3*x(i)^2*sin(pi*x(i))
   return (SINUSOIDAL_A * x_n * x_n * sin(M_PI * x_n));
 }
 
@@ -27,6 +26,14 @@ unsigned int double_to_uint(double decimal) {
 
 double uint_to_double(unsigned int big_int) {
   return (double) big_int / UINT_MAX;
+}
+
+double normalize_output(double x) {
+  double raw_lbound = 0.5;
+  double raw_ubound = 1.0;
+  double norm_lbound = 0.0;
+  double norm_ubound = 1.0;
+  return (((x - raw_lbound) * (norm_ubound - norm_lbound)) / (raw_ubound - raw_lbound));
 }
 
 void write_header(FILE *f_out, char *rng_name, unsigned int seed, char *type) {
@@ -53,9 +60,15 @@ int main() {
   seed = time(NULL);
   FILE *f_out = generate_output_file(fname, "sinusoidal", seed, type);
   x_n = uint_to_double(seed);
-  
+  if (x_n < 0.5) {
+    x_n *= 2;
+    seed = double_to_uint(x_n);
+  }
+
+  //x_n = 0.6;
+
   for (int i = 0; i < COUNT; i++) {
     x_n = iterate(x_n);
-    fprintf(f_out, "%u\n", double_to_uint(x_n));
+    fprintf(f_out, "%u\n", double_to_uint(normalize_output(x_n)));
   }
 } 

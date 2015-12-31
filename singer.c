@@ -61,7 +61,7 @@ int main() {
   seed = time(NULL);
   FILE *f_out = generate_output_file(fname, "singer", seed, type);
   x_n = uint_to_double(seed);
-  
+
   for (int i = 0; i < COUNT; i++) {
     x_n = iterate(x_n);
     fprintf(f_out, "%u\n", double_to_uint(x_n));

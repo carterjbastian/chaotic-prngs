@@ -4,7 +4,7 @@
 #include <time.h>
 #include <string.h>
 
-#define MAX 100000000
+#define MAX 10000000
 int buf_num = sizeof(int) / sizeof(char);
 
 int main() {
