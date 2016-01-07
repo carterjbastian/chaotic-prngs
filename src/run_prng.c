@@ -13,7 +13,7 @@
 #include "generator.h"
 #include "maps.h"
 
-#define SMALL_COUNT   10000000
+#define ITERATE_COUNT   1000000000
 
 extern map_function MAP_FUNCTION_TABLE[MAP_COUNT];
 extern char *MAP_TAG_TABLE[MAP_COUNT];
@@ -44,7 +44,7 @@ int main(int argc, char *argv[]) {
     return -1;
 
   // ToDo: Get the count from command line
-  max_count = SMALL_COUNT;
+  max_count = ITERATE_COUNT;
 
   /* Set up the seed / initial value for the PRNG */
   seed = time(NULL);

@@ -9,7 +9,7 @@
 SRCDIR = ./src
 OBJDIR = ./objs
 OUTDIR = ./output
-TRACEDIR = ./output/traces
+TRACEDIR = ./traces
 TEST_DIR = ./testlogs
 
 # Source Files, Object Files, Binary Files, and Includes
@@ -32,16 +32,9 @@ all: $(SRCS) $(INCS)
 	$(CC) $(CFLAGS) $(SRCS) $(SRCDIR)/run_prng.c -o $(OUT)
 
 clean:
-	rm -f ./output/traces/*.txt ./output/*.txt
-	rm -f ./testlogs/performance/*.txt ./testlogs/*.txt
+	rm -f ./traces/*.txt ./output/*.txt
+	rm -f ./testlogs/*.log
 	rm -f $(OUT)
 	rm -rf *.dSYM
+	rm -f ./performance.log
 
-generate:
-	make clean
-	make all
-	for id in `seq 0 11`; 
-	do
-		echo "Performance Results for Map with ID $(id):" > $(TEST_DIR)/performance/prng_$(id).log
-		time ./$(OUT) $(id) >> $(TEST_DIR)/performance/prng_$(id).log
-	done

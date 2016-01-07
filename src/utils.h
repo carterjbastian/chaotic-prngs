@@ -13,7 +13,7 @@
 #define H_NUMBIT    32
 
 #define OUTPUT_PATH "./output/"
-#define TRACE_PATH  "./output/traces/"
+#define TRACE_PATH  "./traces/"
 #define OUTPUT_EXT  "_out.txt"
 #define TRACE_EXT   "_trace.txt"
 

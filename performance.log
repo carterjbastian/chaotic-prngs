@@ -1,0 +1,72 @@
+
+Performance Results for Map with ID 0 :
+
+real	11m12.913s
+user	9m9.341s
+sys	0m39.246s
+
+Performance Results for Map with ID 1 :
+
+real	13m36.957s
+user	10m53.023s
+sys	0m49.477s
+
+Performance Results for Map with ID 2 :
+
+real	12m50.958s
+user	9m58.970s
+sys	0m50.541s
+
+Performance Results for Map with ID 3 :
+
+real	13m56.388s
+user	9m50.527s
+sys	0m50.890s
+
+Performance Results for Map with ID 4 :
+
+real	14m50.037s
+user	9m49.312s
+sys	0m43.047s
+
+Performance Results for Map with ID 5 :
+
+real	15m58.258s
+user	8m53.796s
+sys	0m45.368s
+
+Performance Results for Map with ID 6 :
+
+real	17m53.710s
+user	9m17.165s
+sys	0m49.794s
+
+Performance Results for Map with ID 7 :
+
+real	17m52.890s
+user	9m22.241s
+sys	0m49.067s
+
+Performance Results for Map with ID 8 :
+
+real	16m21.521s
+user	9m44.204s
+sys	0m50.498s
+
+Performance Results for Map with ID 9 :
+
+real	18m55.896s
+user	10m55.871s
+sys	0m49.914s
+
+Performance Results for Map with ID 10 :
+
+real	20m21.797s
+user	9m57.889s
+sys	1m14.486s
+
+Performance Results for Map with ID 11 :
+
+real	0m0.069s
+user	0m0.001s
+sys	0m0.002s
