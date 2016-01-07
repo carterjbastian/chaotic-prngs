@@ -1,3 +1,22 @@
-Documentation for Chaotic PRNGs project
-Originally for Math 53 Final Project
+Software for Math53 Final Project, 15F
 
+Code Organization:
+All source code for the actual CPRNGs is in the src/ directory.
+The maps are implemented with maps.c and maps.h
+The generators themselves are implemented, created, and designed with 
+generators.c and generators.h
+The utils.c and utils.h files have basic utility functions that are necessary
+for IO and working with data types.
+The functionality and actual sample usage of CPRNGs is in the file run_prng.c
+RunTests.sh is a bash script for automatically building the CPRNGs and running 
+the dieharder tests (as well as placing results in the correct places).
+
+Dependencies:
+dieharder Test Suite.
+
+To build the software and run the tests, navigate to the source directory
+and type the following into your command line:
+./RunTests.sh
+
+
+Beware that the testing suite takes a long time to complete.
